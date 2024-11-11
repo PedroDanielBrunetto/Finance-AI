@@ -25,7 +25,6 @@ const AcquirePlanButton = () => {
     return (
       <Button
         className="w-full rounded-full font-bold"
-        onClick={handleAcquirePlanClick}
         variant={"link"}
       >
         <Link
