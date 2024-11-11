@@ -28,7 +28,7 @@ const TransactionsPage = async () => {
           <h1 className="text-2xl font-bold">Transações</h1>
           <AddTransactionButton userCanAddTransaction={userCanAddTransaction} />
         </div>
-        <ScrollArea>
+        <ScrollArea className="h-full overflow-y-auto pb-16">
           <DataTable columns={transactionColumns} data={transactions} />
         </ScrollArea>
       </div>

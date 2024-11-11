@@ -10,6 +10,15 @@ import {
   TRANSACTION_PAYMENT_METHOD_LABELS,
 } from "@/app/_constants/transactions";
 import EditTransactionButton from "../_components/edit-transaction-button";
+import { deleteTransaction } from "@/app/_actions/delete-transaction";
+
+const deleteTransactionAsync = async (id: string) => {
+  try {
+    await deleteTransaction(id);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 export const transactionColumns: ColumnDef<Transaction>[] = [
   {
@@ -61,7 +70,12 @@ export const transactionColumns: ColumnDef<Transaction>[] = [
       return (
         <div className="space-x-1">
           <EditTransactionButton transaction={transaction} />
-          <Button variant="ghost" size="icon" className="text-muted-foreground">
+          <Button
+            onClick={() => deleteTransactionAsync(transaction.id)}
+            variant="ghost"
+            size="icon"
+            className="text-muted-foreground"
+          >
             <TrashIcon />
           </Button>
         </div>
