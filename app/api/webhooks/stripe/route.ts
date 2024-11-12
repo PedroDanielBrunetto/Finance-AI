@@ -1,6 +1,6 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import stripe, { Stripe } from "stripe";
+import { Stripe } from "stripe";
 
 export const POST = async (request: Request) => {
   if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
