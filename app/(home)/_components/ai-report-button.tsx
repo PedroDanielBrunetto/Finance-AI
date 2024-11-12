@@ -66,6 +66,19 @@ const AiReportButton = ({ month, hasPremiumPlan }: AiReportButtonProps) => {
             </DialogHeader>
             <ScrollArea className="prose max-h-[450px] text-white prose-h3:text-white prose-h4:text-white prose-strong:text-white">
               <Markdown>{report}</Markdown>
+              {report && (
+                <Markdown>
+                  Para garantir uma experiência rápida e estável, estamos
+                  enviando as primeiras 5 transações do mês para análise. Como
+                  nossa startup está crescendo, estamos trabalhando para
+                  expandir nossos recursos e, em breve, poderemos oferecer um
+                  número maior de transações processadas pela IA. Atualmente,
+                  utilizamos uma hospedagem gratuita, que nos limita a um tempo
+                  de carregamento de 10 segundos. Agradecemos sua compreensão e
+                  apoio enquanto evoluímos nossa infraestrutura para melhor
+                  atender você!
+                </Markdown>
+              )}
             </ScrollArea>
             <DialogFooter>
               <DialogClose asChild>
