@@ -6,7 +6,7 @@ import OpenAI from "openai";
 import { GenerateAiReportSchema, generateAiReportSchema } from "./schema";
 
 // Tamanho do lote para enviar as transações em partes menores
-const BATCH_SIZE = 10;
+const BATCH_SIZE = 5;
 
 export const generateAiReport = async ({ month }: GenerateAiReportSchema) => {
   generateAiReportSchema.parse({ month });
