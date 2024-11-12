@@ -7,12 +7,12 @@ import UpsertTransactionDialog from "./upsert-transaction-dialog";
 import {
   Tooltip,
   TooltipContent,
+  TooltipProvider,
   TooltipTrigger,
-} from "@radix-ui/react-tooltip";
-import { TooltipProvider } from "./ui/tooltip";
+} from "./ui/tooltip";
 
 interface AddTransactionButtonProps {
-  userCanAddTransaction: boolean;
+  userCanAddTransaction?: boolean;
 }
 
 const AddTransactionButton = ({
@@ -36,7 +36,7 @@ const AddTransactionButton = ({
           </TooltipTrigger>
           <TooltipContent>
             {!userCanAddTransaction &&
-              "Você atingiu o limite de transações para este mês. Atualize seu plano para criar transações ilimitadas."}
+              "Você atingiu o limite de transações. Atualize seu plano para criar transações ilimitadas."}
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
