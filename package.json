@@ -6,13 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "next lint",
     "prepare": "husky && prisma generate"
-=======
-    "prepare": "husky",
-    "postinstall": "prisma generate"
->>>>>>> dac925ef3aa89e21a8d1ea65f1aaa849b41f7a07
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.5",
@@ -57,6 +52,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "husky": "^9.1.6",
     "lint-staged": "^12.3.2",
