@@ -26,6 +26,7 @@ interface AiReportButtonProps {
 const AiReportButton = ({ month, hasPremiumPlan }: AiReportButtonProps) => {
   const [report, setReport] = useState<string | null>(null);
   const [reportIsLoading, setReportIsLoading] = useState(false);
+
   const handleGenerateReportClick = async () => {
     try {
       setReportIsLoading(true);
@@ -38,6 +39,7 @@ const AiReportButton = ({ month, hasPremiumPlan }: AiReportButtonProps) => {
       setReportIsLoading(false);
     }
   };
+
   return (
     <Dialog
       onOpenChange={(open) => {
